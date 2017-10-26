@@ -1,0 +1,75 @@
+{
+  "contract_name": "EthPlaysPokemon",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "button",
+          "type": "uint256"
+        }
+      ],
+      "name": "submitVote",
+      "outputs": [],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "button",
+          "type": "uint256"
+        }
+      ],
+      "name": "getNameFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "button",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVotesFor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "buttonNames",
+          "type": "bytes32[8]"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b604051610100806101e1833981016040525b60005b600881101561008157604080519081016040528083836008811061004457fe5b6020020151815260006020909101819052826008811061006057fe5b6002020160005b50815181556020820151600190910155505b600101610024565b5b50505b61014d806100946000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632844328f81146100535780633a4ff8a91461006b578063d40b65eb14610093575b600080fd5b341561005e57600080fd5b6100696004356100bb565b005b341561007657600080fd5b6100816004356100e0565b60405190815260200160405180910390f35b341561009e57600080fd5b6100816004356100ff565b60405190815260200160405180910390f35b6001600082600881106100ca57fe5b6002020160005b50600101805490910190555b50565b60008082600881106100ee57fe5b6002020160005b505490505b919050565b600080826008811061010d57fe5b6002020160005b506001015490505b9190505600a165627a7a723058204e180029c0fea2803fd82399ddd87596471bbfcc6ae8972e345d2b49b0bff17a0029",
+  "networks": {
+    "1508954376121": {
+      "events": {},
+      "links": {},
+      "address": "0x9582f82dd3179b23a312958ed7b416aa868db072",
+      "updated_at": 1509040318052
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1509040318052
+}
