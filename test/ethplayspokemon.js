@@ -1,3 +1,5 @@
+import expectThrow from './helpers/expectThrow.js';
+
 var epp = artifacts.require("./EthPlaysPokemon.sol");
 
 contract('EthPlaysPokemon', function(accounts) {
@@ -28,4 +30,12 @@ contract('EthPlaysPokemon', function(accounts) {
         assert.equal(votesFor1.valueOf(), 0, "the votes were not reset to 0")
         assert.equal(votesFor3.valueOf(), 0, "the votes were not reset to 0")
     });
+
+    it("should prevent non-admin users from reseting the vote", async function() {
+        const app = await epp.deployed()
+        app.submitVote(1)
+        expectThrow(app.resetVotes({from: accounts[1]}))
+        const votes = await app.getVotesFor.call(1)
+        assert.equal(votes.valueOf(), 1, "a non-admin user reset the votes")
+    })
 });

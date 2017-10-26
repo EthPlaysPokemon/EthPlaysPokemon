@@ -7,8 +7,11 @@ contract EthPlaysPokemon {
     }
 
     Button[] public buttons;
+    address admin;
 
     function EthPlaysPokemon(bytes32[] buttonNames) {
+        admin = msg.sender;
+
         for(uint i = 0; i < buttonNames.length; i++) {
             buttons.push(Button({
                 name: buttonNames[i],
@@ -36,6 +39,7 @@ contract EthPlaysPokemon {
     }
 
     function resetVotes() {
+        require(msg.sender == admin);
         for (uint i = 0; i < buttons.length; i++) {
             buttons[i].voteCount = 0;
         }
